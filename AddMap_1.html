@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <meta name="keywords" content="天地图">
+    <script type="text/javascript" src="http://api.tianditu.gov.cn/api?v=4.0&tk=672922bca49f2f3dc4cdffda9979ec35"></script>
+    <title>天地图-经纬度直投地图</title>
+    <style type="text/css">
+        body,html{width: 100%;height: 100%;margin: 0;font-family: 华文琥珀}
+        #mymap{width: 100%;height: 400px}
+        input,b,p{margin-left: 12px;font-size:14px}
+    </style>
+    <script>
+        var map;
+        var zoom = 12;
+        function LoadMap()
+        {
+            map = new T.Map('mymap',{projection:'EPSG:4326'}) ;//大地平面投影
+            map.centerAndZoom(new T.LngLat(140.40769,39.89945),zoom);
+        }
+    </script>
+</head>
+<body onload="LoadMap()">天地图
+    <div id="mymap"></div>
+    <p>本例展示一个经纬直投天地图</p>
+</body>
+</html>
