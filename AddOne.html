@@ -11,7 +11,7 @@
     </style>
     <title>加载单层地图</title>
     <script>
-        var map;
+        var map4;
         var zoom = 13;
         var lay;
         function Ditu() {
@@ -20,9 +20,9 @@
                 "&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}";
             lay = new T.TileLayer(imageURL, {minZoom: 1, maxZoom: 18});
             var config ={layer:[lay]};
-            map = new T.Map("one",config);
-            map.centerAndZoom(new T.LngLat(116.40969, 39.89945),zoom);
-            map.enableScrolWheelZoom();
+            map4 = new T.Map("one",config);
+            map4.centerAndZoom(new T.LngLat(116.40969, 39.89945),zoom);
+            map4.enableScrolWheelZoom();
         }
     </script>
 </head>
