@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一个天地图应用的例子</title>
+    <script type="text/javascript" src="http://api.tianditu.gov.cn/api?v=4.0&tk=672922bca49f2f3dc4cdffda9979ec35"></script>
+    <script>
+        var map;
+        var zoom = 12;
+        function AddMap() {
+            map = new T.Map("idmap");
+            map.centerAndZoom(new T.LngLat(116.40769, 39.89945),zoom);
+        }
+    </script>
+</head>
+<body onload="AddMap()">
+<div id="idmap" style="position: absolute;width: 50%;height: 50% ">一个天地图的简单应用</div>
+</body>
+</html>
