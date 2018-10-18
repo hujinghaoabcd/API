@@ -4,7 +4,7 @@
     <meta http-equiv="content-type" content="text/html;charset=UTF-8">
     <meta name="keywords" content="天地图">
     <script type="text/javascript" src="http://api.tianditu.gov.cn/api?v=4.0&tk=672922bca49f2f3dc4cdffda9979ec35"></script>
-    <title>移动地图</title>
+    <title>自动缩放地图</title>
     <style type="text/css">
         body,html{width: 100%;height: 100%;margin: 0;font-family: 华文琥珀}
         #mymap{width: 100%;height: 400px}
@@ -19,13 +19,13 @@
             map.centerAndZoom(new T.LngLat(140.40769,39.89945),zoom);
         }
         setTimeout(function() {
-            map.panTo(new T.LngLat(116.64899, 40.12948))
+            map.setZoom(14)
         },2000)
     </script>
 </head>
 <body onload="LoadMap()">
 <div id="mymap"></div>
-<p>本例展示地图自动平移</p>
+<p>本例展示地图的自动缩放</p>
 <div>
     <input type="button" onclick="map.zoomIn()" value="放大地图">
     <input type="button" onclick="map.zoomOut()" value="缩小地图">
